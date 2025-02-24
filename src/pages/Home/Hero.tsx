@@ -8,8 +8,8 @@ import { Link } from "react-router-dom";
 export default function Hero() {
   return (
     <main className="bg-white">
-      <section className="relative h-[95vh] bg-white bg-[url('https://img.freepik.com/premium-photo/office-white-desk-laptop-accessories-top-view-free-space-your-text-flat-lay_187166-36073.jpg')] bg-cover bg-center">
-        <div className="absolute z-10 bg-gradient-primary w-[100%] h-[100%] opacity-80"></div>
+      <section className="relative h-[95vh] bg-white bg-[url('/images/hero_images/home_hero.jpg')] bg-cover bg-center">
+        <div className="absolute z-10 bg-gradient-primary w-[100%] h-[100%] opacity-70"></div>
 
         <div className="relative max-w-6xl px-4 sm:px-6 lg:px-14 py-20 md:py-44 z-20">
           <div className="pt-24 sm:pt-0">

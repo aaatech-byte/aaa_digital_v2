@@ -288,9 +288,10 @@ export default function OurWork() {
 
   return (
     <main className="bg-gradient-primary">
-      <section className="relative h-[95vh] bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20230801/pngtree-top-tips-to-make-money-blogging-image_12958761.jpg')] bg-center bg-cover">
-        <div className="absolute bg-primary z-10 w-full h-[95vh] opacity-80"></div>
-        <div className="relative z-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-22 md:pt-36">
+      <section className="relative h-[95vh] bg-[url('/images/hero_images/work_hero.jpg')] bg-center bg-cover">
+        <div className="absolute bg-primary z-10 w-full h-[95vh] opacity-65"></div>
+
+        <div className="relative z-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:pt-36">
           <div className="text-center pt-32">
             <h1 className="my-3 md:my-4 text-2xl sm:text-4xl md:text-5xl font-orbitron font-semibold tracking-wide leading-6 text-white">
             Projects We've {" "}
@@ -317,7 +318,7 @@ export default function OurWork() {
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-primary to-transparent"></div>
       </section>
 
-      <section className="py-20 bg-gradient-primary">
+      <section className="py-12 bg-gradient-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {projects.map((project, index) => (

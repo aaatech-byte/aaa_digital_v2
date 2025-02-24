@@ -27,7 +27,7 @@ const posts: Post[] = [
     date: "Apr 10, 2024",
     readTime: "6 min read",
     image:
-      "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80",
+      "images/blog_images/blog1.jpg",
     link: "/blog/blog4",
   },
 
@@ -39,7 +39,7 @@ const posts: Post[] = [
     date: "Feb 28, 2024",
     readTime: "7 min read",
     image:
-      "https://www.retis.be/wp-content/uploads/2013/11/images-a-la-une-publications-retis.png",
+      "images/blog_images/blog2.jpg",
     link: "/blog/blog2",
   },
 
@@ -51,7 +51,7 @@ const posts: Post[] = [
     date: "Mar 15, 2024",
     readTime: "4 min read",
     image:
-      "https://www.glinfotech.net/blog/wp-content/uploads/2024/10/E-commerce-Main-banner.jpg",
+      "images/blog_images/blog5.jpg",
     link: "/blog/blog3",
   },
 
@@ -62,8 +62,7 @@ const posts: Post[] = [
       "Learn why responsive design is essential for business success in the mobile-first era.",
     date: "Mar 25, 2024",
     readTime: "5 min read",
-    image:
-      "https://media.licdn.com/dms/image/D4D12AQFNwdaM_lbYQA/article-cover_image-shrink_720_1280/0/1686822959705?e=2147483647&v=beta&t=ve99KPOUhOtkJShRn80s84HjkLDqtFTnTwy--Ss5B6s",
+    image: "images/blog_images/blog4.jpg",
 
     link: "/blog/blog1",
   },
@@ -76,7 +75,7 @@ const posts: Post[] = [
     date: "Feb 10, 2024",
     readTime: "5 min read",
     image:
-      "https://www.appikr.com/blog/wp-content/uploads/2024/03/A-Beginners-Tutorial-on-Cross-Platform-Mobile-App-Development.png",
+      "images/blog_images/blog3.jpg",
     link: "/blog/blog5",
   },
   {
@@ -87,7 +86,7 @@ const posts: Post[] = [
     date: "Mar 15, 2024",
     readTime: "4 min read",
     image:
-      "https://plus.unsplash.com/premium_photo-1661764570116-b1b0a2da783c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "images/blog_images/blog6.jpg",
     link: "/blog/blog6",
   },
 ];
@@ -110,29 +109,29 @@ export default function Blog() {
 
   return (
     <main className="bg-gradient-primary">
-      <section className="relative h-[95vh] bg-[url('https://png.pngtree.com/thumb_back/fh260/background/20230801/pngtree-top-tips-to-make-money-blogging-image_12958761.jpg')] bg-center bg-cover">
-        <div className="absolute bg-primary w-[100%] h-[95vh] opacity-80"></div>
+      <section className="relative h-[95vh] bg-[url('/images/hero_images/blog_hero.jpeg')] bg-center bg-cover">
+        <div className="absolute bg-primary w-[100%] h-[95vh] opacity-65"></div>
 
         <section className="relative pt-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:pt-32">
             <div className="text-center">
-              
+
               <h1 className="my-3 md:my-4 text-2xl sm:text-4xl md:text-5xl font-orbitron font-semibold tracking-wide leading-6 text-white">
-              Case Studies &{" "}
-              <span className="text-yellow text-2xl md:text-5xl">Blogs</span>
-            </h1>
-            <p className="text-base sm:text-lg text-white mt-11 md:mt-12 mb-4 md:mb-7 mx-auto max-w-4xl">
-            Explore our blogs and case studies for insights on web and app development, digital marketing, and software solutions.
-            </p>
-            <Button
-              variant="primary"
-              size="md"
-              className="group px-4 py-3 font-bold"
-              onClick={() => navigate("/contact")}
-            >
-              Let's Get Started
-              <ArrowRight className="ml-3 h-7 w-7 bg-yellow text-black rounded-full p-1 group-hover:translate-x-1 transition-transform" />
-            </Button>
+                Case Studies &{" "}
+                <span className="text-yellow text-2xl md:text-5xl">Blogs</span>
+              </h1>
+              <p className="text-base sm:text-lg text-white mt-11 md:mt-12 mb-4 md:mb-7 mx-auto max-w-4xl">
+                Explore our blogs and case studies for insights on web and app development, digital marketing, and software solutions.
+              </p>
+              <Button
+                variant="primary"
+                size="md"
+                className="group px-4 py-3 font-bold"
+                onClick={() => navigate("/contact")}
+              >
+                Let's Get Started
+                <ArrowRight className="ml-3 h-7 w-7 bg-yellow text-black rounded-full p-1 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </div>
           </div>
         </section>
@@ -140,19 +139,29 @@ export default function Blog() {
       </section>
 
       <div className="flex justify-center flex-wrap md:flex-row flex-col pt-20 pb-10">
-        <section className=" sm:w-3/4">
+
+
+        <section className="sm:w-3/4">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post, index) => (
                 <div
                   key={index}
-                  className=" rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 ease-in-out hover:shadow-2xl transition duration-300"
+                  className="rounded-xl overflow-hidden shadow-xl hover:-translate-y-2 ease-in-out hover:shadow-2xl transition duration-300"
                 >
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-48 object-cover"
-                  />  
+                  {/* Image Wrapper */}
+                  <div className="relative scale-100 duration-300 hover:scale-105 cursor-pointer transition">
+                    {/* Image */}
+                    <img
+                      src={post.image}
+                      alt={post.title}
+                      className="w-full h-48 object-cover "
+                    />
+
+                    {/* Overlay */}
+                    {/* <div className="absolute inset-0 bg-primary bg-opacity-40 hover:bg-opacity-10 transition duration-300"></div> */}
+                  </div>
+
                   <div className="p-4">
                     <div className="flex items-center text-sm text-gray-300 mb-4">
                       <Calendar className="h-4 w-4 mr-2 text-yellow" />
@@ -164,7 +173,10 @@ export default function Blog() {
                       {post.title}
                     </h3>
                     <p className="text-gray-300 mb-4 font-sm">{post.excerpt}</p>
-                    <Button variant="primary" size="md" className="group px-3 py-2 font-bold mt-4"
+                    <Button
+                      variant="primary"
+                      size="md"
+                      className="group px-3 py-2 font-bold mt-4"
                       onClick={() => handleNavigation(post.link)}
                     >
                       Learn More
@@ -176,6 +188,10 @@ export default function Blog() {
             </div>
           </div>
         </section>
+
+
+
+
 
       </div>
 

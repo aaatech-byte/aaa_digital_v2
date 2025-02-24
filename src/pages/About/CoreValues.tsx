@@ -34,12 +34,12 @@ const CoreValues: React.FC = () => {
   ];
 
   return (
-    <div className="py-10 bg-gradient-primary from-indigo-900 to-purple-900">
+    <div className="py-12 bg-gradient-primary from-indigo-900 to-purple-900">
       <section className="mx-auto text-center max-w-7xl">
-        <h2 className="mb-12 text-4xl font-bold text-white font-orbitron">
+      <h2 className="mt-4 text-2xl md:text-5xl font-orbitron font-semibold text-white mb-4">
           Our <span className="text-yellow">Core Values</span>
         </h2>
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 pt-6">
           {values.map((value, index) => (
             <div
               key={index}
