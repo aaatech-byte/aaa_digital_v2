@@ -183,7 +183,7 @@ const Careers: React.FC = () => {
         ))}
       </div>
 
-     
+
 
       <div id="jobs-list" className="max-w-4xl mx-auto space-y-4">
         {filteredJobs.map((job) => (

@@ -59,12 +59,12 @@ const Blog5 = () => {
   return (
     <main className="max-w-4xl m-auto pt-24 pb-10">
       <div className="flex justify-between items-center">
-        <p className="text-gray-400 text-xl font-semibold italic">
+        <p className="text-gray-300 text-xl font-semibold italic">
           {post.publishDate}
         </p>
       </div>
 
-      <h1 className="font-bold py-5 font-serif text-4xl">{post.title}</h1>
+      <h1 className="font-bold py-5 font-orbitron text-4xl text-white">{post.title}</h1>
 
       <img
         className="w-full object-cover rounded-3xl"
@@ -73,18 +73,18 @@ const Blog5 = () => {
       />
 
       <div className="descriptions py-3 px-4">
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
+        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
           {post.desc_p1}
         </p>
 
-        <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
+        <p className="text-white font-bold pt-5 text-2xl leading-9 tracking-wide font-orbitron">
           {post.desc_h1}
         </p>
 
-        <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+        <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
           {post.desc_h2}
         </p>
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
+        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
           {post.desc_p2}
         </p>
 
@@ -111,19 +111,19 @@ const Blog5 = () => {
           },
         ].map((trend, index) => (
           <div key={index}>
-            <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+            <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
               {trend.title}
             </p>
-            <p className="text-gray-800 text-lg leading-9 tracking-wide">
+            <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
               {trend.desc}
             </p>
           </div>
         ))}
 
-        <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+        <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
           How These Trends Will Benefit Your Mobile App
         </p>
-        <ul className="text-gray-800 text-lg leading-9 pl-5 tracking-wide">
+        <ul className="text-gray-300 text-lg leading-9 pl-5 tracking-wide font-clashDisplay">
           {post.desc_benefits.map((benefit, index) => (
             <li key={index} className="list-disc">
               {benefit}
@@ -131,49 +131,49 @@ const Blog5 = () => {
           ))}
         </ul>
 
-        <p className="text-primary font-bold pt-10 text-2xl leading-9 tracking-wide">
+        <p className="text-white font-bold pt-10 text-2xl leading-9 tracking-wide font-orbitron">
           {post.crossPlatformSection.title}
         </p>
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
+        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
           {post.crossPlatformSection.content}
         </p>
 
         {post.crossPlatformSection.points.map((point, index) => (
           <div key={index}>
-            <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+            <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
               {point.heading}
             </p>
-            <p className="text-gray-800 text-lg leading-9 tracking-wide">
+            <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
               {point.text}
             </p>
           </div>
         ))}
 
-        <p className="text-primary font-bold pt-10 text-xl leading-9 tracking-wide">
+        <p className="text-white font-bold pt-10 text-xl leading-9 tracking-wide font-orbitron">
           How Cross-Platform Development Saves You Time and Money
         </p>
         {post.crossPlatformSection.howItSaves.map((item, index) => (
           <div key={index}>
-            <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+            <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide font-orbitron">
               {item.heading}
             </p>
-            <p className="text-gray-800 text-lg leading-9 tracking-wide">
+            <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
               {item.text}
             </p>
           </div>
         ))}
 
-        <p className="text-primary font-bold pt-10 text-xl leading-9 tracking-wide">
+        <p className="text-white font-bold pt-10 text-xl leading-9 tracking-wide font-orbitron">
           Real-World Success Story
         </p>
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
+        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
           {post.crossPlatformSection.successStory}
         </p>
 
-        <p className="text-primary font-bold pt-10 text-2xl leading-9 tracking-wide">
+        <p className="text-white font-bold pt-10 text-2xl leading-9 tracking-wide font-orbitron">
           Conclusion
         </p>
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
+        <p className="text-gray-300 text-lg leading-9 tracking-wide font-clashDisplay">
           Mobile app development in 2025 is about integrating cutting-edge
           technologies for smarter, more efficient, and secure apps. By
           embracing trends like AI, AR, cloud solutions, and cross-platform

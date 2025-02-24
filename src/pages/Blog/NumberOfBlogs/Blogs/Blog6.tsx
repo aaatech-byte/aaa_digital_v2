@@ -4,7 +4,7 @@ const Blog6 = () => {
       title: "The Importance of a Secure E-Commerce Website in 2025",
       publishDate: "Jan 22, 2025",
       image:
-          "https://www.weetechsolution.com/wp-content/uploads/2023/10/Enable-two-factor-authentication-2FA.jpg", 
+          "/images/blog_images/blog6.jpg", 
       desc_p1: `
           Website security is no longer an afterthought in the world of e-commerce. With cyberattacks on the rise and online fraud becoming more sophisticated, having robust website security in place is essential. In this blog, we’ll explore why website security is crucial for e-commerce businesses in 2025 and provide actionable steps you can take to protect your site and customers.
       `,
@@ -54,14 +54,14 @@ const Blog6 = () => {
 
   return (
       <>
-          <main className="max-w-4xl m-auto pt-24 pb-10">
+          <section className="max-w-4xl m-auto pt-24 pb-10">
               <div className="flex justify-between items-center">
-                  <p className="text-gray-400 text-xl font-semibold italic">
+                  <p className="text-gray-300 text-xl font-semibold italic">
                       {post.publishDate}
                   </p>
               </div>
 
-              <h1 className="font-bold py-5 font-serif text-4xl">{post.title}</h1>
+              <h1 className="font-bold py-5 font-serif text-4xl text-white">{post.title}</h1>
 
               <img
                   className="w-full rounded-3xl object-cover"
@@ -70,71 +70,71 @@ const Blog6 = () => {
               />
 
               <div className="descriptions py-3 px-4">
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p1}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
+                  <p className="text-white font-orbitron  font-bold pt-5 text-2xl leading-9 tracking-wide">
                       {post.desc_h1}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p2}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p3}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p4}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p5}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
+                  <p className="text-white font-orbitron  font-bold pt-5 text-2xl leading-9 tracking-wide">
                       {post.desc_h2}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+                  <p className="text-gray-300 font-orbitr font-bold pt-5 text-xl leading-9 tracking-wide">
                       {post.desc_h3}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p6}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+                  <p className="text-gray-300 font-orbitr font-bold pt-5 text-xl leading-9 tracking-wide">
                       {post.desc_h4}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p7}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+                  <p className="text-white font-orbitron  font-bold pt-5 text-xl leading-9 tracking-wide">
                       {post.desc_h5}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p8}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+                  <p className="text-white font-bold pt-5 text-xl leading-9 tracking-wide">
                       {post.desc_h6}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p9}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+                  <p className="text-white font-orbitron  font-bold pt-5 text-xl leading-9 tracking-wide">
                       {post.desc_h7}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p10}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
+                  <p className="text-white font-orbitron  font-bold pt-5 text-xl leading-9 tracking-wide">
                       {post.desc_h8}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p11}
                   </p>
-                  <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
+                  <p className="text-white font-orbitron  font-bold pt-5 text-2xl leading-9 tracking-wide">
                       {post.desc_h9}
                   </p>
-                  <p className="text-gray-800 text-lg leading-9 tracking-wide">
+                  <p className="text-gray-300 text-lg leading-9 tracking-wide">
                       {post.desc_p12}
                   </p>
               </div>
-          </main>
+          </section>
       </>
   );
 };
