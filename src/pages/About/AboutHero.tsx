@@ -9,7 +9,7 @@ const AboutHero = () => {
       <section className="relative h-[95vh]  bg-[url('/images/hero_images/about_hero.jpg')] bg-cover bg-center">
       <div className="absolute z-10 w-[100%] h-[95vh] bg-gradient-primary opacity-65"></div>
 
-        <div className="relative z-30 px-4 pt-[13rem] mx-auto text-center max-w-7xl sm:px-6 lg:px-8 md:pt-48">
+        <div className="relative z-30 px-4 pt-32  mx-auto text-center max-w-7xl sm:px-6 lg:px-8 md:pt-52">
         <h1 className="my-3 md:my-4 text-2xl sm:text-4xl md:text-5xl font-orbitron font-semibold tracking-wide leading-6 text-white">
               Your Trusted Partner in <br />
               <span className="text-3xl text- md:text-6xl text-yellow">

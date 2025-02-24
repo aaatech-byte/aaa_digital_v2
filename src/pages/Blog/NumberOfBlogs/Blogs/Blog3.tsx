@@ -3,7 +3,7 @@ const Blog3 = () => {
     category: "E-commerce Solutions",
     title: "How to Build an E-Commerce Website That Converts in 2025",
     publishDate: "Jan 22, 2025",
-    image: "https://www.glinfotech.net/blog/wp-content/uploads/2024/10/E-commerce-Main-banner.jpg", 
+    image: "/images/blog_images/blog3.jpg",
     desc_p1: `
       In the competitive world of e-commerce, having a visually appealing and highly functional website is no longer optional. With more than 2 billion people shopping online worldwide, businesses need to ensure their e-commerce platforms are optimized for conversions. In this blog, we’ll explore key features and strategies that can help you build an e-commerce website that attracts customers and drives sales in 2025.
     `,
@@ -54,99 +54,60 @@ const Blog3 = () => {
 
   return (
     <>
-      <main className="max-w-4xl m-auto pt-24 pb-10">
+    <div className="bg-gradient-primary">
+      
+      <main className="max-w-4xl m-auto pt-24 pb-10 ">
         <div className="flex justify-between items-center">
-          {/* <p className="text-primary font-bold text-xl cursor-pointer rounded-2xl">
-            {post.category}
-          </p> */}
-          <p className="text-gray-400 text-xl font-semibold italic">
+          <p className="text-gray-300 text-xl font-semibold italic">
             {post.publishDate}
           </p>
         </div>
 
-        <h1 className="font-bold py-5 font-serif text-4xl">{post.title}</h1>
+        <h1 className="font-orbitron font-bold py-5 text-4xl text-white">
+          {post.title}
+        </h1>
 
         <img
-          className="w-full  rounded-3xl object-cover"
+          className="w-full rounded-3xl object-cover"
           src={post.image}
           alt={post.title}
         />
 
         <div className="descriptions py-3 px-4">
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
+          <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
             {post.desc_p1}
           </p>
-          <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
-            {post.desc_h1}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h2}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p2}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h3}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p3}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h4}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p4}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h5}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p5}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h6}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p6}
-          </p>
-          <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
-            {post.desc_h7}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h8}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p7}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h9}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p8}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h10}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p9}
-          </p>
-          <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
-            {post.desc_h11}
-          </p>
-          <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-            {post.desc_h12}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p10}
-          </p>
-          <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
-            {post.desc_h13}
-          </p>
-          <p className="text-gray-800 text-lg leading-9 tracking-wide">
-            {post.desc_p11}
-          </p>
+
+          {[
+            { heading: post.desc_h1, text: post.desc_p2 },
+            { heading: post.desc_h2, text: post.desc_p2 },
+            { heading: post.desc_h3, text: post.desc_p3 },
+            { heading: post.desc_h4, text: post.desc_p4 },
+            { heading: post.desc_h5, text: post.desc_p5 },
+            { heading: post.desc_h6, text: post.desc_p6 },
+            { heading: post.desc_h7, text: "" },
+            { heading: post.desc_h8, text: post.desc_p7 },
+            { heading: post.desc_h9, text: post.desc_p8 },
+            { heading: post.desc_h10, text: post.desc_p9 },
+            { heading: post.desc_h11, text: "" },
+            { heading: post.desc_h12, text: post.desc_p10 },
+            { heading: post.desc_h13, text: post.desc_p11 },
+          ].map(({ heading, text }, index) => (
+            <div key={index}>
+              <p className="font-orbitron text-white font-bold pt-5 text-xl leading-9 tracking-wide">
+                {heading}
+              </p>
+              {text && (
+                <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
+                  {text}
+                </p>
+              )}
+            </div>
+          ))}
         </div>
       </main>
+      
+    </div>
     </>
   );
 };

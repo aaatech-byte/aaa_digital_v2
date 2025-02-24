@@ -3,7 +3,7 @@ const Blog2 = () => {
     category: "E-Commerce Optimization",
     title: "Boost Your E-Commerce Performance with These Simple Tips",
     publishDate: "Jan 22, 2025",
-    image: "https://www.retis.be/wp-content/uploads/2013/11/images-a-la-une-publications-retis.png",
+    image: "/images/blog_images/blog2.jpg",
     desc_p1: `
       Optimizing your e-commerce website is essential for improving user experience, boosting sales, and staying ahead of your competition. In this blog, we'll share simple but effective tips to enhance your e-commerce site's performance, drive more traffic, and increase conversions.
     `,
@@ -62,126 +62,115 @@ const Blog2 = () => {
   };
 
   return (
-    <main className="max-w-4xl m-auto pt-24 pb-10">
-      <div className="flex justify-between items-center">
-        <p className="text-gray-400 text-xl font-semibold italic">
-          {post.publishDate}
-        </p>
-      </div>
+    <main className="bg-gradient-primary">
+      <section className="max-w-4xl m-auto pt-24 pb-10">
+        <div className="flex justify-between items-center">
+          <p className="text-gray-400 text-xl font-semibold italic">
+            {post.publishDate}
+          </p>
+        </div>
 
-      <h1 className="font-bold py-5 font-serif text-4xl">{post.title}</h1>
-zzz
-      <img
-        className="w-full object-cover rounded-3xl"
-        src={post.image}
-        alt={post.title}
-      />
+        <h1 className="font-bold py-5 text-white font-orbitron text-4xl">
+          {post.title}
+        </h1>
+        <img
+          className="w-full object-cover rounded-3xl"
+          src="images/blog_images/blog2.jpg"
+          alt={post.title}
+        />
 
-      <div className="descriptions py-3 px-4">
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
-          {post.desc_p1}
-        </p>
+        <div className="descriptions py-3 px-4">
+          <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
+            {post.desc_p1}
+          </p>
 
-        <p className="text-primary font-bold pt-5 text-2xl leading-9 tracking-wide">
-          {post.desc_h1}
-        </p>
+          <p className="text-white font-orbitron font-bold pt-5 text-2xl leading-9 tracking-wide">
+            {post.desc_h1}
+          </p>
 
-        <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-          {post.desc_h2}
-        </p>
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
-          {post.desc_p2}
-        </p>
+          <p className="text-white font-orbitron font-bold pt-5 text-xl leading-9 tracking-wide">
+            {post.desc_h2}
+          </p>
+          <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
+            {post.desc_p2}
+          </p>
 
-        {[
-          {
-            title: "1. Optimize Your Page Load Speed",
-            desc: "A fast-loading website is essential for retaining visitors. Compress images, use caching, and minimize JavaScript to ensure your site loads quickly.",
-          },
-          {
-            title: "2. Mobile Optimization",
-            desc: "With mobile commerce on the rise, it’s crucial that your website is mobile-friendly. Use responsive design to ensure a seamless experience on all devices.",
-          },
-          {
-            title: "3. Simplify Navigation and Search",
-            desc: "A user-friendly navigation system makes it easier for customers to find products and make purchases. Ensure your site’s search and filtering capabilities are intuitive.",
-          },
-          {
-            title: "4. Implement Secure Payment Options",
-            desc: "Offering secure, reliable payment methods is essential to build customer trust. Implement SSL certificates and provide popular payment options like PayPal or Stripe.",
-          },
-          {
-            title: "5. Focus on User Experience (UX)",
-            desc: "A clean, well-organized layout can make all the difference in the shopping experience. Simplify your checkout process and ensure easy access to product information.",
-          },
-        ].map((tip, index) => (
-          <div key={index}>
-            <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-              {tip.title}
-            </p>
-            <p className="text-gray-800 text-lg leading-9 tracking-wide">
-              {tip.desc}
-            </p>
-          </div>
-        ))}
-
-        <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-          How These Tips Will Benefit Your E-Commerce Site
-        </p>
-        <ul className="text-gray-800 text-lg leading-9 pl-5 tracking-wide">
-          {post.desc_benefits.map((benefit, index) => (
-            <li key={index} className="list-disc">
-              {benefit}
-            </li>
+          {[
+            {
+              title: "1. Optimize Your Page Load Speed",
+              desc: "A fast-loading website is essential for retaining visitors. Compress images, use caching, and minimize JavaScript to ensure your site loads quickly.",
+            },
+            {
+              title: "2. Mobile Optimization",
+              desc: "With mobile commerce on the rise, it’s crucial that your website is mobile-friendly. Use responsive design to ensure a seamless experience on all devices.",
+            },
+            {
+              title: "3. Simplify Navigation and Search",
+              desc: "A user-friendly navigation system makes it easier for customers to find products and make purchases. Ensure your site’s search and filtering capabilities are intuitive.",
+            },
+            {
+              title: "4. Implement Secure Payment Options",
+              desc: "Offering secure, reliable payment methods is essential to build customer trust. Implement SSL certificates and provide popular payment options like PayPal or Stripe.",
+            },
+            {
+              title: "5. Focus on User Experience (UX)",
+              desc: "A clean, well-organized layout can make all the difference in the shopping experience. Simplify your checkout process and ensure easy access to product information.",
+            },
+          ].map((tip, index) => (
+            <div key={index}>
+              <p className="text-white font-orbitron font-bold pt-5 text-xl leading-9 tracking-wide">
+                {tip.title}
+              </p>
+              <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
+                {tip.desc}
+              </p>
+            </div>
           ))}
-        </ul>
 
-        <p className="text-primary font-bold pt-10 text-2xl leading-9 tracking-wide">
-          {post.optimizationSection.title}
-        </p>
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
-          {post.optimizationSection.content}
-        </p>
+          <p className="text-white font-orbitron font-bold pt-5 text-xl leading-9 tracking-wide">
+            How These Tips Will Benefit Your E-Commerce Site
+          </p>
+          <ul className="font-clashDisplay text-gray-300 text-lg leading-9 pl-5 tracking-wide">
+            {post.desc_benefits.map((benefit, index) => (
+              <li key={index} className="list-disc">
+                {benefit}
+              </li>
+            ))}
+          </ul>
 
-        {post.optimizationSection.points.map((point, index) => (
-          <div key={index}>
-            <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-              {point.heading}
-            </p>
-            <p className="text-gray-800 text-lg leading-9 tracking-wide">
-              {point.text}
-            </p>
-          </div>
-        ))}
+          <p className="text-white font-orbitron font-bold pt-10 text-2xl leading-9 tracking-wide">
+            {post.optimizationSection.title}
+          </p>
+          <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
+            {post.optimizationSection.content}
+          </p>
 
-        <p className="text-primary font-bold pt-10 text-xl leading-9 tracking-wide">
-          How E-Commerce Optimization Saves You Time and Money
-        </p>
-        {post.optimizationSection.howItSaves.map((item, index) => (
-          <div key={index}>
-            <p className="text-primary font-bold pt-5 text-xl leading-9 tracking-wide">
-              {item.heading}
-            </p>
-            <p className="text-gray-800 text-lg leading-9 tracking-wide">
-              {item.text}
-            </p>
-          </div>
-        ))}
+          {post.optimizationSection.points.map((point, index) => (
+            <div key={index}>
+              <p className="text-white font-orbitron font-bold pt-5 text-xl leading-9 tracking-wide">
+                {point.heading}
+              </p>
+              <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
+                {point.text}
+              </p>
+            </div>
+          ))}
 
-        <p className="text-primary font-bold pt-10 text-xl leading-9 tracking-wide">
-          Real-World Success Story
-        </p>
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
-          {post.optimizationSection.successStory.content}
-        </p>
+          <p className="text-white font-orbitron font-bold pt-10 text-xl leading-9 tracking-wide">
+            Real-World Success Story
+          </p>
+          <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
+            {post.optimizationSection.successStory.content}
+          </p>
 
-        <p className="text-primary font-bold pt-10 text-2xl leading-9 tracking-wide">
-          Conclusion
-        </p>
-        <p className="text-gray-800 text-lg leading-9 tracking-wide">
-          {post.optimizationSection.conclusion.content}
-        </p>
-      </div>
+          <p className="text-white font-orbitron font-bold pt-10 text-2xl leading-9 tracking-wide">
+            Conclusion
+          </p>
+          <p className="font-clashDisplay text-gray-300 text-lg leading-9 tracking-wide">
+            {post.optimizationSection.conclusion.content}
+          </p>
+        </div>
+      </section>
     </main>
   );
 };
