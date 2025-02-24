@@ -9,9 +9,9 @@ const WhyChooseUs = () => {
         }}
       >
         <div className="px-4 mx-auto py-14 max-w-7xl sm:px-8">
-        <h1 className=" text-2xl md:text-5xl font-orbitron text-center font-semibold text-white mb-4">
+        <h2 className="mt-4 text-2xl md:text-5xl font-orbitron font-semibold text-white mb-4">
             Why <span className="text-yellow">Choose Us</span>
-          </h1>
+          </h2>
           <div className="flex flex-col items-center justify-between gap-12 md:flex-row md:gap-20">
             {/* Left Section */}
             <div className="w-full md:w-1/2">

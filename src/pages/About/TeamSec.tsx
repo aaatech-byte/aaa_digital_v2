@@ -8,17 +8,17 @@ const team: TeamMember[] = [
   {
     name: "Muhammad Haseeb Abbas",
     position: "Managing Director",
-    image: "/images/haseeb.jpeg",
+    image: "/images/team_images/haseeb.jpeg",
   },
   {
     name: "Junaid Khan",
     position: "Marketing Head",
-    image: "/images/junaid.jpeg",
+    image: "/images/team_images/junaid.jpeg",
   },
   {
     name: "Muhammad Nabeel Khan",
     position: "Creative Director",
-    image: "/images/nabeel_img.jpeg",
+    image: "/images/team_images/nabeel.jpeg",
   },
 ];
 
@@ -27,8 +27,8 @@ const TeamSec: React.FC = () => {
     <section className="py-12 bg-gradient-primary">
       <div className=" mx-auto max-w-7xl ">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold text-[#FFFFFF] font-orbitron md:text-4xl">
-            Meet Our <span className="text-yellow">Team</span>
+        <h2 className="mt-4 text-2xl md:text-5xl font-orbitron font-semibold text-white mb-4">
+            Meet <span className="text-yellow">Our Team</span>
           </h2>
         </div>
         <div className="flex justify-center items-center flex-wrap gap-4 max-w-6xl mx-auto">
@@ -38,7 +38,7 @@ const TeamSec: React.FC = () => {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="h-80 w-80 object-cover cursor-pointer ease-linear group-hover:mix-blend-normal mix-blend-luminosity transition-all duration-300"
+                  className="h-80 w-80 object-cover cursor-pointer ease-linear group-hover:mix-blend-normal mix-blend-luminosity transition-all duration-500"
                 />
               </div>
               <div className="py-3 text-center">

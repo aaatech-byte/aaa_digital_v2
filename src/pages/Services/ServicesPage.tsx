@@ -27,6 +27,7 @@ interface Service {
   li3: string;
   li4: string;
   li5: string;
+  bg_link: string;
 }
 
 const services: Service[] = [
@@ -41,6 +42,7 @@ const services: Service[] = [
     li3: "WordPress Development",
     li4: "Shopify Store Setup",
     li5: "Website Redesign",
+    bg_link: "/images/services/web.jpg",
   },
   {
     icon: Smartphone,
@@ -53,6 +55,7 @@ const services: Service[] = [
     li3: "App Maintenance & Updates",
     li4: "Mobile App UI/UX Design",
     li5: "App Optimization",
+    bg_link: "/images/services/mobile_dev.jpg",
   },
   {
     icon: ShoppingBag,
@@ -65,6 +68,7 @@ const services: Service[] = [
     li3: "E-Commerce App Development",
     li4: "Product Management Systems",
     li5: "E-Commerce Analytics",
+    bg_link: "/images/services/ecom2.jpg",
   },
   {
     icon: Users,
@@ -77,6 +81,7 @@ const services: Service[] = [
     li3: "ERP Systems",
     li4: "API Integrations",
     li5: "Cloud-Based Software",
+    bg_link: "/images/services/software_sol.jpg",
   },
   {
     icon: Megaphone,
@@ -89,6 +94,7 @@ const services: Service[] = [
     li3: "PPC Management (Google Ads)",
     li4: "Content Marketing & Strategy",
     li5: "SEO Audits",
+    bg_link: "/images/services/digital_mar.jpg",
   },
   {
     icon: Rss,
@@ -101,6 +107,7 @@ const services: Service[] = [
     li3: "Content Creation & Scheduling",
     li4: "Community Management",
     li5: "Influencer Marketing",
+    bg_link: "/images/services/social_mar_2.jpg",
   },
   {
     icon: Clapperboard,
@@ -113,6 +120,7 @@ const services: Service[] = [
     li3: "Product Demos & Tutorials",
     li4: "Video Ads & Social Media Clips",
     li5: "Video SEO",
+    bg_link: "/images/services/video_mar.jpg",
   },
   {
     icon: Gauge,
@@ -125,8 +133,10 @@ const services: Service[] = [
     li3: "Lead Generation Campaigns",
     li4: "List Segmentation",
     li5: "A/B Testing & Optimization",
+    bg_link: "/images/services/email.jpg",
   }
 ];
+
 
 
 export default function ServicesPage() {
@@ -148,8 +158,8 @@ export default function ServicesPage() {
     <main className="bg-gradient-primary">
       {/* Hero Section */}
       
-      <section className="relative h-[95vh] bg-[url('https://png.pngtree.com/thumb_back/fw800/background/20240328/pngtree-flat-lay-top-view-office-table-desk-image_15644935.jpg')] bg-center bg-cover">
-        <div className="absolute bg-primary w-[100%] h-[95vh] opacity-80"></div>
+      <section className="relative h-[95vh] bg-[url('/images/hero_images/service_hero.jpg')] bg-center bg-cover">
+        <div className="absolute bg-primary w-[100%] h-[95vh] opacity-70"></div>
 
         <section className="relative pt-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:pt-32">
@@ -180,14 +190,15 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-12 bg-gradient-primary max-w-7xl mx-auto">
+      <section id="services" className="py-12 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {services.map((service, index) => (
             <div
-              key={index}
-              className="relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform transform hover:scale-105 cursor-pointer h-[16rem] bg-[url('https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg')] bg-cover bg-center"
-              onClick={() => openModal(service)}
-            >
+            key={index}
+            className="relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform transform hover:scale-105 cursor-pointer h-[16rem]"
+            style={{ backgroundImage: `url(${service.bg_link})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+            onClick={() => openModal(service)}
+          >
               <div className="absolute bg-primary w-full h-full opacity-50"></div>
               <div className="p-4 flex justify-center items-center flex-col relative z-10">
                 <service.icon className="h-12 w-12 text-white mx-auto mb-4" />

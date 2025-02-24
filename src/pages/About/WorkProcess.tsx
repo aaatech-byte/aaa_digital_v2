@@ -45,10 +45,10 @@ const WorkingProcess = () => {
   return (
     <section className="work-process bg-gradient-primary">
       <div className="container max-w-6xl pt-14 pb-7 mx-auto">
-        <h1 className=" text-2xl md:text-5xl font-orbitron text-center font-semibold text-white mb-4">
+      <h2 className="mt-4 text-2xl md:text-5xl font-orbitron text-center font-semibold text-white mb-4">
           Our <span className="text-yellow">Working Process</span>
-        </h1>
-        <p className="text-[#FFFFFF] text-center text-[18px]">At our core, we believe in a seamless and collaborative approach to delivering IT solutions. <br /> Here's what working with us looks like:</p>
+        </h2>
+        <p className="text-base sm:text-lg text-[#FFFFFF] text-center max-w-3xl mx-auto">At our core, we believe in a seamless and collaborative approach to delivering IT solutions. Here's what working with us looks like:</p>
         <div className="relative ">
           <div className=" bg-[url('https://jthemes.net/themes/html/growim/assets/images/shapes/work-process-two-border.png')] bg-center bg-no-repeat h-[43vh]"></div>
           <div className="absolute top-0">

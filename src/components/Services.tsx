@@ -22,10 +22,10 @@ interface Service {
   li3: string;
   li4: string;
   li5: string;
+  bg_link: string;
 }
 
 import { Button } from './ui/Button'
-
 
 const services: Service[] = [
   {
@@ -39,6 +39,7 @@ const services: Service[] = [
     li3: "WordPress Development",
     li4: "Shopify Store Setup",
     li5: "Website Redesign",
+    bg_link: "/images/services/web.jpg",
   },
   {
     icon: Smartphone,
@@ -51,6 +52,7 @@ const services: Service[] = [
     li3: "App Maintenance & Updates",
     li4: "Mobile App UI/UX Design",
     li5: "App Optimization",
+    bg_link: "/images/services/mobile_dev.jpg",
   },
   {
     icon: ShoppingBag,
@@ -63,6 +65,7 @@ const services: Service[] = [
     li3: "E-Commerce App Development",
     li4: "Product Management Systems",
     li5: "E-Commerce Analytics",
+    bg_link: "/images/services/ecom2.jpg",
   },
   {
     icon: Users,
@@ -75,6 +78,7 @@ const services: Service[] = [
     li3: "ERP Systems",
     li4: "API Integrations",
     li5: "Cloud-Based Software",
+    bg_link: "/images/services/software_sol.jpg",
   },
   {
     icon: Megaphone,
@@ -87,6 +91,7 @@ const services: Service[] = [
     li3: "PPC Management (Google Ads)",
     li4: "Content Marketing & Strategy",
     li5: "SEO Audits",
+    bg_link: "/images/services/digital_mar.jpg",
   },
   {
     icon: Rss,
@@ -99,6 +104,7 @@ const services: Service[] = [
     li3: "Content Creation & Scheduling",
     li4: "Community Management",
     li5: "Influencer Marketing",
+    bg_link: "/images/services/social_mar_2.jpg",
   },
   {
     icon: Clapperboard,
@@ -111,6 +117,7 @@ const services: Service[] = [
     li3: "Product Demos & Tutorials",
     li4: "Video Ads & Social Media Clips",
     li5: "Video SEO",
+    bg_link: "images/services/video_mar.jpg",
   },
   {
     icon: Gauge,
@@ -123,6 +130,7 @@ const services: Service[] = [
     li3: "Lead Generation Campaigns",
     li4: "List Segmentation",
     li5: "A/B Testing & Optimization",
+    bg_link: "/images/services/email.jpg",
   }
 ];
 
@@ -147,7 +155,7 @@ const Services: React.FC = () => {
           <h2 className="mt-4 text-2xl md:text-5xl font-orbitron font-semibold text-white mb-4">
             Our <span className="text-yellow">Services</span>
           </h2>
-          <p className="text-base sm:textlg text-[#FFFFFF] max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-white max-w-3xl mx-auto">
             Revolutionize your business with innovative digital solutions that drive growth, enhance efficiency, and unlock limitless potential in the evolving digital landscape.
           </p>
         </div>
@@ -156,16 +164,17 @@ const Services: React.FC = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform transform hover:scale-105 cursor-pointer h-[16rem] bg-[url('https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg')] bg-cover bg-center"
+              className="relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform transform hover:scale-105 cursor-pointer h-[16rem]"
+              style={{ backgroundImage: `url(${service.bg_link})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
               onClick={() => openModal(service)}
             >
               <div className="absolute bg-primary w-full h-full opacity-50"></div>
-              <div className="p-4 flex justify-center items-center flex-col relative z-10 ">
+              <div className="p-4 flex justify-center items-center flex-col relative z-10">
                 <service.icon className="h-12 w-12 text-white mx-auto mb-4" />
                 <h3 className="text-xl text-center font-bold text-white font-orbitron pt-2 sm:pt-3 md:pt-4 mb-2">{service.title} <br /> <span className="text-yellow">{service.subtitle}</span>
                 </h3>
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-3  text-center z-20">
+              <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-3 text-center z-20">
                 <h3 className="text-xl font-bold mb-3 font-orbitron">{service.title}<br /> <span className="text-yellow">{service.subtitle}</span>
                 </h3>
                 <p className="text-white text-sm">{service.description}</p>
@@ -199,10 +208,10 @@ const Services: React.FC = () => {
               <h3 className="text-3xl font-bold font-orbitron text-primary my-2">{modalService.title}
                 <br /> <span className="text-yellow">{modalService.subtitle}</span>
               </h3>
-              <p className="text-primary  my-4 text-base">{modalService.description}</p>
+              <p className="text-primary my-4 text-base">{modalService.description}</p>
               <ul className="text-left text-primary space-y-3 pt-4">
                 {[modalService.li1, modalService.li2, modalService.li3, modalService.li4, modalService.li5].map((item, index) => (
-                  <li key={index} className="flex items-center font-orbitron text-sm ">
+                  <li key={index} className="flex items-center font-orbitron text-sm">
                     <span className="w-2 h-2 bg-yellow font-medium rounded-full mr-2"></span>
                     {item}
                   </li>
