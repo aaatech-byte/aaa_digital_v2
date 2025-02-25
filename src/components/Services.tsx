@@ -9,8 +9,10 @@ import {
   Clapperboard,
   ShoppingBag,
   Rss,
-  X
+  X,
 } from "lucide-react";
+import { Link } from "react-router-dom";
+
 
 interface Service {
   icon: React.ElementType;
@@ -168,13 +170,13 @@ const Services: React.FC = () => {
               style={{ backgroundImage: `url(${service.bg_link})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
               onClick={() => openModal(service)}
             >
-              <div className="absolute bg-primary w-full h-full opacity-50"></div>
+              <div className="absolute bg-primary w-full h-full opacity-70"></div>
               <div className="p-4 flex justify-center items-center flex-col relative z-10">
                 <service.icon className="h-12 w-12 text-white mx-auto mb-4" />
                 <h3 className="text-xl text-center font-bold text-white font-orbitron pt-2 sm:pt-3 md:pt-4 mb-2">{service.title} <br /> <span className="text-yellow">{service.subtitle}</span>
                 </h3>
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-3 text-center z-20">
+              <div className="absolute inset-0 bg-black bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-3 text-center z-20">
                 <h3 className="text-xl font-bold mb-3 font-orbitron">{service.title}<br /> <span className="text-yellow">{service.subtitle}</span>
                 </h3>
                 <p className="text-white text-sm">{service.description}</p>
@@ -217,6 +219,18 @@ const Services: React.FC = () => {
                   </li>
                 ))}
               </ul>
+              <div className="flex flex-col justify-center sm:flex-row mt-4">
+                <Link to="/contact">
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    className="group px-2 py-2 font-bold bg-yellow text-secondary hover:text-white hover:bg-secondary"
+                  >
+                    Growth Plan
+                    {/* <ArrowRight className="ml-3 h-5 w-5 bg-yellow font-bold text-black rounded-full p-1 group-hover:translate-x-1 transition-transform" /> */}
+                  </Button>
+                </Link>
+              </div>
             </>
           )}
         </div>

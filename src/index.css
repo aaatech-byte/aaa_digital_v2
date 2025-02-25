@@ -124,11 +124,11 @@ body {
   object-fit: cover;
 }
 
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
   .work-process {
     display: none;
   }
-}
+} */
 
 .ReactModal__Overlay{
   z-index: 99;

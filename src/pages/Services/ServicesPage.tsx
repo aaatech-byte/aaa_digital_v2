@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../../components/ui/Button";
 import Contact from '../../components/ContactCTA';
 import Testimonials from "../../components/Testimonials";
+import { Link } from "react-router-dom";
 
 interface Service {
   icon: React.ElementType;
@@ -157,32 +158,32 @@ export default function ServicesPage() {
   return (
     <main className="bg-gradient-primary">
       {/* Hero Section */}
-      
+
       <section className="relative h-[95vh] bg-[url('/images/hero_images/service_hero.jpg')] bg-center bg-cover">
         <div className="absolute bg-primary w-[100%] h-[95vh] opacity-70"></div>
 
         <section className="relative pt-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:pt-32">
             <div className="text-center">
-              
+
               <h1 className="my-3 md:my-4 text-2xl sm:text-4xl md:text-5xl font-orbitron font-semibold tracking-wide leading-6 text-white">
-              Transform {" "} <span className="text-yellow">Your Digital Presence</span>
-            </h1>
-            <p className="text-base sm:text-lg text-white mt-11 md:mt-12 mb-4 md:mb-7 mx-auto max-w-4xl">
-            At AAA Digital, we offer tailored digital services to help your
+                Transform {" "} <span className="text-yellow">Your Digital Presence</span>
+              </h1>
+              <p className="text-base sm:text-lg text-white mt-11 md:mt-12 mb-4 md:mb-7 mx-auto max-w-4xl">
+                At AAA Digital, we offer tailored digital services to help your
                 business thrive online. From stunning websites to powerful mobile
                 apps, our solutions drive growth, boost engagement, and increase
                 conversions.
-            </p>
-            <Button
-              variant="primary"
-              size="md"
-              className="group px-4 py-3 font-bold"
-              onClick={() => navigate("/contact")}
-            >
-              Let's Get Started
-              <ArrowRight className="ml-3 h-7 w-7 bg-yellow text-black rounded-full p-1 group-hover:translate-x-1 transition-transform" />
-            </Button>
+              </p>
+              <Button
+                variant="primary"
+                size="md"
+                className="group px-4 py-3 font-bold"
+                onClick={() => navigate("/contact")}
+              >
+                Let's Get Started
+                <ArrowRight className="ml-3 h-7 w-7 bg-yellow text-black rounded-full p-1 group-hover:translate-x-1 transition-transform" />
+              </Button>
             </div>
           </div>
         </section>
@@ -194,19 +195,19 @@ export default function ServicesPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {services.map((service, index) => (
             <div
-            key={index}
-            className="relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform transform hover:scale-105 cursor-pointer h-[16rem]"
-            style={{ backgroundImage: `url(${service.bg_link})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-            onClick={() => openModal(service)}
-          >
-              <div className="absolute bg-primary w-full h-full opacity-50"></div>
+              key={index}
+              className="relative bg-white rounded-xl shadow-lg overflow-hidden group transition-transform transform hover:scale-105 cursor-pointer h-[16rem]"
+              style={{ backgroundImage: `url(${service.bg_link})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+              onClick={() => openModal(service)}
+            >
+              <div className="absolute bg-primary w-full h-full opacity-70"></div>
               <div className="p-4 flex justify-center items-center flex-col relative z-10">
                 <service.icon className="h-12 w-12 text-white mx-auto mb-4" />
                 <h3 className="text-xl text-center font-bold text-white font-orbitron pt-2 sm:pt-3 md:pt-4 mb-2">
                   {service.title} <br /> <span className="text-yellow">{service.subtitle}</span>
                 </h3>
               </div>
-              <div className="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-3 text-center z-20">
+              <div className="absolute inset-0 bg-black bg-opacity-85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-center items-center text-white p-3 text-center z-20">
                 <h3 className="text-xl font-bold mb-3 font-orbitron">
                   {service.title}<br /> <span className="text-yellow">{service.subtitle}</span>
                 </h3>
@@ -251,6 +252,18 @@ export default function ServicesPage() {
                   </li>
                 ))}
               </ul>
+              <div className="flex flex-col justify-center sm:flex-row mt-4">
+                <Link to="/contact">
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    className="group px-2 py-2 font-bold bg-yellow text-secondary hover:text-white hover:bg-secondary"
+                  >
+                    Growth Plan
+                    {/* <ArrowRight className="ml-3 h-5 w-5 bg-yellow font-bold text-black rounded-full p-1 group-hover:translate-x-1 transition-transform" /> */}
+                  </Button>
+                </Link>
+              </div>
             </>
           )}
         </div>
