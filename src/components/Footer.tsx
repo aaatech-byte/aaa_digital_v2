@@ -11,7 +11,6 @@ type SocialLink = {
 
 type Service = {
   name: string;
-  path: string;
 };
 
 type CompanyLink = {
@@ -32,6 +31,8 @@ type FooterData = {
   companyLinks: CompanyLink[];
   contactInfo: ContactInfo;
   address: string;
+  address2: string;
+  address3: string;
 };
 
 const footerData: FooterData = {
@@ -41,7 +42,7 @@ const footerData: FooterData = {
   socialLinks: [
     {
       name: "LinkedIn",
-      url: "https://www.linkedin.com/company/aaa-digital-marketing/posts/?feedView=all",
+      url: "https://www.linkedin.com/company/aaa-digital-marketing",
       icon: <Linkedin size={24} />,
     },
     {
@@ -51,19 +52,19 @@ const footerData: FooterData = {
     },
     {
       name: "Instagram",
-      url: "https://www.facebook.com/profile.php?id=61566395171281",
+      url: "https://www.instagram.com/aaadigitalltd/",
       icon: <Instagram size={24} />,
     },
   ],
   services: [
-    { name: "Web Development", path: "/services/web-development" },
-    { name: "App Development", path: "/services/mobile-apps" },
-    { name: "Custom Software Development", path: "/services/custom-software" },
-    { name: "E-Commerce Solutions", path: "/services/ecommerce" },
-    { name: "Digital Marketing", path: "/services/digital-marketing" },
-    { name: "Social Media Marketing", path: "/services/social-marketing" },
-    { name: "Email Marketing", path: "/services/email-marketing" },
-    { name: "Video Marketing & Branding", path: "/services/video-marketing" },
+    { name: "Web Development" },
+    { name: "App Development" },
+    { name: "Custom Software Development" },
+    { name: "E-Commerce Solutions"},
+    { name: "Digital Marketing"},
+    { name: "Social Media Marketing" },
+    { name: "Email Marketing"},
+    { name: "Video Marketing & Branding" },
   ],
   companyLinks: [
     { name: "Portfolio", path: "/work" },
@@ -75,7 +76,9 @@ const footerData: FooterData = {
     email: "aaadigitalltd@gmail.com",
     addressLink: "https://www.google.com/maps/place/Pennsylvania,+USA",
   },
-  address: "Headquarter: Pennsylvania, USA",
+  address: "Headquarter: Philadelphia, Pennsylvania USA",
+  address2: "Toronto, Ontario Canada",
+  address3: "Lahore, Punjab Pakistan",
 };
 
 export default function Footer() {
@@ -125,7 +128,7 @@ export default function Footer() {
               {footerData.services.map((service, index) => (
                 <li key={index}>
                   <button
-                    onClick={() => handleNavigation(service.path)}
+                    // onClick={() => handleNavigation(service)}
                     className="text-gray-200 hover:text-yellow transition duration-300 transform hover:translate-x-2"
                   >
                     {service.name}
@@ -177,6 +180,24 @@ export default function Footer() {
             >
               <LocationOnIcon className="mr-2" />
               <span className="text-sm">{footerData.address}</span>
+            </div>
+            <div
+              className="flex items-center text-gray-200 hover:text-yellow cursor-pointer transition-transform transform hover:scale-105"
+              onClick={() =>
+                window.open(footerData.contactInfo.addressLink, "_blank")
+              }
+            >
+              <LocationOnIcon className="mr-2" />
+              <span className="text-sm">{footerData.address2}</span>
+            </div>
+            <div
+              className="flex items-center text-gray-200 hover:text-yellow cursor-pointer transition-transform transform hover:scale-105"
+              onClick={() =>
+                window.open(footerData.contactInfo.addressLink, "_blank")
+              }
+            >
+              <LocationOnIcon className="mr-2" />
+              <span className="text-sm">{footerData.address3}</span>
             </div>
           </div>
         </div>
